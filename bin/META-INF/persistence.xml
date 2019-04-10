@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <!--  Aenderung des Namens der persistence-unit -> auch Klasse persistence.util.SessionUtil anpassen! -->
+	<persistence-unit name="F1-DB">
+		<class>de.thb.formel1.persistence.impl.Gefahrenvon</class>
+		<class>de.thb.formel1.persistence.impl.GefahrenvonPK</class>
+		<class>de.thb.formel1.persistence.impl.Land</class>
+		<class>de.thb.formel1.persistence.impl.Rennen</class>
+		<class>de.thb.formel1.persistence.impl.Rennfahrer</class>
+		<class>de.thb.formel1.persistence.impl.Rennstall</class>
+		<class>de.thb.formel1.persistence.impl.Rennstrecke</class>
+		<class>de.thb.formel1.persistence.impl.Saison</class>
+		<class>de.thb.formel1.persistence.impl.Setztein</class>
+		<class>de.thb.formel1.persistence.impl.SetzteinPK</class>
+	
+		<properties>
+			<!-- Property Daten bei Verwendung einer MySQL DB -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://mcb3nni.lima-db.de/db_305340_33" />
+			<property name="javax.persistence.jdbc.database" value="db_305340_33" />
+			<property name="javax.persistence.jdbc.user" value="USER305340" />
+			<property name="javax.persistence.jdbc.password" value="BW99CS98BSC92" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<!-- Property Daten bei Verwendung einer lokalen MySQL DB -->
+			<!-- 
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/DBNAME" />
+			<property name="javax.persistence.jdbc.user" value="USER" />
+			<property name="javax.persistence.jdbc.password" value="PASSWORD" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			-->
+			<!-- Property Daten bei Verwendung einer Oracle DB (Treiber muesste besorgt werden)-->
+			<!-- 
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@fbi-oraclelehre.th-brandenburg.de:1521:db01" />
+			<property name="javax.persistence.jdbc.user" value="USER" />
+			<property name="javax.persistence.jdbc.password" value="20182018" />
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			-->
+			<!-- Property Daten zum Logging -->
+			<property name="eclipselink.logging.level" value="INFO"/>
+			<property name="eclipselink.logging.level.sql" value="OFF"/>
+			<property name="eclipselink.logging.parameters" value="false"/>
+						
+		</properties>
+		
+	</persistence-unit>
+</persistence>
