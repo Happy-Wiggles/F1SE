@@ -12,4 +12,5 @@
 
 This project uses Swing as the toolkit for the GUI.
 If you change anything make a note at changelog.md. **The newest change should be at the top.**
+Put more informations next to the version number (date and who has made changes).
 
